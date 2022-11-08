@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RPS</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+
+<body>
+	<h1>RPS: The Better Rock Paper Scissors Game</h1>
+	<h2>Instructions</h2>
+	<p>Choose your weapon and click the button to play.</p>
+
+	<table>
+		<tr>
+			<td colspan="2"><span class="name">Player</span> selection:</td>
+			<td id = "resultColor">Result</td>
+			<td>Computer Selection</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<form>
+					<label for="rock">Rock</label>
+					<input type="radio" name="weapon" value="rock" id="rock">
+					<br>
+					<label for="paper">Paper</label>
+					<input type="radio" name="weapon" value="paper" id="paper">
+					<br>
+					<label for="scissors">Scissors</label>
+					<input type="radio" name="weapon" value="scissors" id="scissors">
+				</form>
+			</td>
+			<td><input type="button" value="Play" onclick="play()"></td>
+			<td><span class="computerChoice"></span></td>
+			<!--computer choice-->
+		</tr>
+		<tr>
+			<td colspan="2"><span class="name">Player</span> selected:</td>
+			<td colspan="2"><span id="playerChoice"></span></td>
+			<!--player choice-->
+		</tr>
+		<tr>
+			<td colspan="2">Computer selected:</td>
+			<td colspan="2"><span class="computerChoice"></span></td>
+			<!--computer choice-->
+
+		</tr>
+	</table>
+
+	<!--Three columns for results score and history-->
+	<div id="container">
+		<div class="column">
+			<h2>Results</h2>
+			<p>Winner: <span id="result"></span></p>
+			<p>Rock Win Percentage: <span id="rockWin"></span></p>
+			<p>Paper Win Percentage: <span id="paperWin"></span></p>
+			<p>Scissors Win Percentage: <span id="scissorsWin"></span></p>
+		</div>
+		<div class="column">
+			<h2>Score</h2>
+			<p><span class="name">Player</span>: <span id="playerScore">0</span></p>
+			<p>Computer: <span id="computerScore">0</span></p>
+			<p>Ties: <span id="ties">0</span></p>
+		</div>
+		<div class="column">
+			<h2>History</h2>
+			<p>You have played a total of <span id="timesPlayed">0</span> times</p>
+			<p>Rock: <span id="rockUsed">0</span> times</p>
+			<p>Paper: <span id="paperUsed">0</span> times</p>
+			<p>Scissors: <span id="scissorsUsed">0</span> times</p>
+		</div>
+	</div>
+	<!--old code-->
+	<!--
+		<h2><span class="name">Player</span>, choose your weapon</h2>
+		<form>
+			<label for="rock">Rock</label>
+			<input type="radio" name="weapon" value="rock" id="rock">
+			<br>
+			<label for="paper">Paper</label>
+			<input type="radio" name="weapon" value="paper" id="paper">
+			<br>
+			<label for="scissors">Scissors</label>
+			<input type="radio" name="weapon" value="scissors" id="scissors">
+			<br>
+			<input type="button" value="Play" onclick="play()">
+
+		</form>
+		<br>
+	-->
+	<!--script from game.js-->
+	<script src="game.js"></script>
+
+
+</body>
+
+</html>
